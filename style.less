@@ -1,0 +1,152 @@
+@color: #333;
+@borderColor: #aaa;
+@darkColor: #f6f6f6;
+@black: #000;
+@lightColor: #2db7f5;
+@activeBorderWidth: 3px;
+@borderWidth: 1px;
+@fontSize: 14px;
+@largeFontSize: 20px;
+
+.navbar {
+  color: @color;
+  background: @darkColor;
+  overflow: hidden;
+  border-style: solid;
+  border-color: @borderColor;
+  border-width: 0px;
+  a {
+    color: @color
+  }
+  .item {
+    font-size: @fontSize;
+  }
+  .item.active {
+    border-style: solid;
+    border-color: @lightColor;
+    border-width: 0px;
+    background: #fff;
+    >a {
+      color: @lightColor;
+    }
+  }
+  >.brand {
+    font-size: @largeFontSize;
+  }
+}
+
+.navbar.dark {
+  background: @color;
+  a {
+    color: @darkColor;
+  }
+  .item.active {
+    background: @black;
+  }
+}
+
+.navbar.fixed {
+  position: fixed;
+}
+
+
+.navbar.top {
+  top: 0px;
+  left: 0px;
+  border-bottom-width: @borderWidth;
+  .item.active {
+    border-bottom-width: @activeBorderWidth;
+  }
+}
+
+.navbar.right {
+  top: 0px;
+  right: 0px;
+  text-align: right;
+  border-left-width: @borderWidth;
+  .item.active {
+    border-left-width: @activeBorderWidth;
+  }
+  >.brand {
+    padding-right: 15px;
+  }
+}
+
+.navbar.bottom {
+  left: 0px;
+  bottom: 0px;
+  border-top-width: @borderWidth;
+  .item.active {
+    border-top-width: @activeBorderWidth;
+  }
+}
+
+.navbar.left {
+  top: 0px;
+  left: 0px;
+  border-right-width: @borderWidth;
+  .item.active {
+    border-right-width: @activeBorderWidth;
+  }
+  >.brand {
+    padding-left: 15px;
+  }
+}
+
+.navbar.horizontal {
+  padding: 0px 15px;
+  line-height: 50px;
+  width: 100%;
+  height: 50px;
+  .item.active {
+    height: 50px;
+  }
+  >.nav {
+    >.item {
+      float: left;
+      >a {
+        padding: 0px 20px;
+        display: block;
+      }
+    }
+  }
+  >.brand {
+    margin-right: 30px;
+    float: left;
+  }
+  .nav.second {
+    float: right;
+  }
+}
+
+.navbar.vertical {
+  height: 100%;
+  width: 200px;
+  .item {
+    line-height: 40px;
+    height: 40px;
+    padding: 0px 15px;
+    display: block;
+    >a {
+      display: block;
+    }
+  }
+  >.brand {
+    height: 60px;
+    line-height: 60px;
+    border-bottom: @borderWidth solid @borderColor;
+  }
+  >.nav.second {
+    border-top: @borderWidth solid @borderColor;
+    width: 100%;
+    position: absolute;
+    bottom: 15px;
+    .item {
+      button {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
