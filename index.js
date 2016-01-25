@@ -1,5 +1,5 @@
 import React from 'react';
-require('./style.less');
+
 const CLS = {
   top: 'navbar fixed top horizontal',
   right: 'navbar fixed right vertical',
