@@ -1,5 +1,5 @@
 {
-  "name": "navbar",
+  "name": "rc-navbar",
   "version": "0.1.0",
   "description": "npm install rc-navbar --save",
   "main": "index.js",
